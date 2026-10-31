@@ -2,4 +2,14 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="plant_green_dark">#28543A</color>
+    <color name="plant_green">#598367</color>
+    <color name="plant_green_light">#E3EBDD</color>
+    <color name="plant_pink">#F7D4D9</color>
+    <color name="plant_pink_dark">#D96576</color>
+    <color name="plant_beige">#F8F3EC</color>
+    <color name="plant_white">#FFFFFF</color>
+    <color name="plant_gray">#777777</color>
+
 </resources>

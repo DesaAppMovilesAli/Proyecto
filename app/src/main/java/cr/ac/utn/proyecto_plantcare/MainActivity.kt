@@ -1,10 +1,13 @@
 package cr.ac.utn.proyecto_plantcare
 
 import android.os.Bundle
+import android.view.View
+import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import cr.ac.utn.proyecto_plantcare.Util.util
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,5 +19,12 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        val btnAddPlant = findViewById<Button>(R.id.btnAddPlant)
+
+        btnAddPlant.setOnClickListener(View.OnClickListener{ view ->
+            util.openActivity(this,
+                AddPlantActivity::class.java)
+        })
     }
 }

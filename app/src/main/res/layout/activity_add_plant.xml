@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/plant_beige"
+    tools:context=".AddPlantActivity">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Title -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:text="@string/add_plant"
+                android:textColor="@color/plant_green_dark"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <!-- Photo -->
+
+            <ImageView
+                android:id="@+id/imgPlant"
+                android:layout_width="140dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center"
+                android:background="@color/plant_green_light"
+                android:contentDescription="@string/add_photo"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:text="@string/add_photo"
+                android:textColor="@color/plant_green_dark"
+                android:textSize="16sp" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*"
+                android:layout_marginBottom="18dp">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/btnCamera"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/btn_camera"
+                        android:textAllCaps="false"
+                        android:backgroundTint="@color/plant_pink"
+                        android:textColor="@color/plant_green_dark"/>
+
+                    <Button
+                        android:id="@+id/btnGallery"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/btn_gallery"
+                        android:textAllCaps="false"
+                        android:backgroundTint="@color/plant_pink"
+                        android:textColor="@color/plant_green_dark"/>
+
+                </TableRow>
+            </TableLayout>
+
+            <!-- Plant name -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/plant_id"
+                android:textColor="@color/plant_green_dark"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etPlantID"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginBottom="14dp"
+                android:hint="@string/plant_id"
+                android:inputType="textCapSentences" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/plant_name"
+                android:textColor="@color/plant_green_dark"
+                android:textStyle="bold" />
+
+            <!-- Species -->
+
+            <EditText
+                android:id="@+id/etPlantName"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginBottom="14dp"
+                android:hint="@string/plant_name"
+                android:inputType="textCapSentences" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/plant_species"
+                android:textColor="@color/plant_green_dark"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etPlantSpecies"
+                android:layout_width="match_parent"
+                android:layout_height="59dp"
+                android:layout_marginBottom="14dp"
+                android:hint="@string/plant_species"
+                android:inputType="textCapSentences" />
+
+            <!-- Plant Location -->
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="193dp"
+                    android:layout_height="21dp"
+                    android:text="@string/acquisition_date"
+                    android:textColor="@color/plant_green_dark"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvAcqDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TextView" />
+
+                <ImageButton
+                    android:id="@+id/btnAcqDate"
+                    android:layout_width="71dp"
+                    android:layout_height="67dp"
+                    app:srcCompat="@android:drawable/ic_menu_my_calendar" />
+            </TableRow>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/plant_location"
+                android:textColor="@color/plant_green_dark"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/plant_pink"
+                android:text="@string/plant_location"
+                android:textAllCaps="false"
+                android:textColor="@color/plant_green_dark" />
+
+            <RadioGroup
+                android:id="@+id/rgPlantLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="14dp">
+
+                <RadioButton
+                    android:id="@+id/rbIndoor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/plant_indoor"
+                    android:buttonTint="@color/plant_green"/>
+
+                <RadioButton
+                    android:id="@+id/rbOutdoor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="@string/plant_outdoor"
+                    android:buttonTint="@color/plant_green"/>
+
+            </RadioGroup>
+
+            <!-- Watering frequency -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/watering_frequency"
+                android:textColor="@color/plant_green_dark"
+                android:textStyle="bold" />
+
+            <!-- Watering date -->
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <RadioButton
+                    android:id="@+id/rbWaterDaily"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/watering_daily" />
+
+                <RadioButton
+                    android:id="@+id/rbWaterThreeDays"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/watering_three_days" />
+
+                <RadioButton
+                    android:id="@+id/rbWaterWeekly"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/watering_weekly" />
+
+                <RadioButton
+                    android:id="@+id/rbWaterFifteenDays"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/watering_fifteen_days" />
+            </RadioGroup>
+
+            <!-- Notes -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/plant_notes"
+                android:textColor="@color/plant_green_dark"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etPlantNotes"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="top"
+                android:hint="@string/plant_notes"
+                android:inputType="textMultiLine" />
+
+            <!-- Action buttons -->
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/btnBack"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/plant_pink"
+                        android:text="@string/btn_back"
+                        android:textAllCaps="false"
+                        android:textColor="@color/plant_green_dark" />
+
+                    <Button
+                        android:id="@+id/btnCancel2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/plant_pink"
+                        android:text="@string/btn_cancel"
+                        android:textAllCaps="false"
+                        android:textColor="@color/plant_green_dark" />
+
+                    <Button
+                        android:id="@+id/btnSave"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/btn_save"
+                        android:textAllCaps="false"
+                        android:backgroundTint="@color/plant_green"
+                        android:textColor="@color/plant_white"/>
+
+                </TableRow>
+            </TableLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
