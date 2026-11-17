@@ -8,7 +8,6 @@
     <string name="plant_indoor">Interior</string>
     <string name="plant_outdoor">Exterior</string>
     <string name="watering_frequency">Frecuencia de riego</string>
-    <string name="next_watering">Próximo riego</string>
     <string name="btn_profile">Perfil</string>
     <string name="title_map">Mapa</string>
     <string name="plant_name">Nombre de la planta</string>
@@ -20,8 +19,6 @@
     <string name="add_photo">Agregar foto</string>
     <string name="btn_save">Guardar</string>
     <string name="title_filters">Filtros</string>
-    <string name="plant_type">Tipo de planta</string>
-    <string name="sort_by">Ordenar por</string>
     <string name="btn_apply_filters">Aplicar filtros</string>
     <string name="btn_clear_filters">Limpiar filtros</string>
     <string name="title_edit_plant">Editar planta</string>
@@ -55,4 +52,11 @@
     <string name="invalid_data">Los datos ingresados no son válidos</string>
     <string name="image_error">No se pudo cargar la imagen</string>
     <string name="location_error">No se pudo obtener la ubicación</string>
+    <string name="watering_daily">Diariamente</string>
+    <string name="watering_three_days">Cada 3 días</string>
+    <string name="watering_weekly">Semanalmente</string>
+    <string name="watering_fifteen_days">Cada 15 días</string>
+    <string name="acquisition_date">Fecha de adquisición</string>
+    <string name="plant_id">ID de la planta</string>
+
 </resources>

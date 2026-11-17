@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/plant_beige"
+    tools:context=".PlantDetailActivity">
+
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Title -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:text="@string/plant_details"
+                android:textColor="@color/plant_green_dark"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <!-- Plant photo -->
+
+            <ImageView
+                android:id="@+id/imgPlantDetail"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:background="@color/plant_green_light"
+                android:contentDescription="@string/add_photo"
+                android:layout_marginBottom="18dp"/>
+
+            <!-- Plant name -->
+
+            <!-- Species -->
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="29dp"
+                android:text="@string/plant_id"
+                android:textColor="@color/plant_green_dark"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvPlantId"
+                android:layout_width="match_parent"
+                android:layout_height="57dp"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:text="@string/plant_name"
+                android:textColor="@color/plant_green_dark"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvPlantName"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:text="TextView" />
+
+            <!-- Location -->
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="27dp"
+                android:text="@string/plant_species"
+                android:textColor="@color/plant_green_dark"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvSpecie"
+                android:layout_width="match_parent"
+                android:layout_height="53dp"
+                android:text="TextView" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="@string/plant_location"
+                android:textColor="@color/plant_green_dark"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvLocation"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:text="TextView" />
+
+            <!-- Watering frequency -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="29dp"
+                android:text="@string/watering_frequency"
+                android:textColor="@color/plant_green_dark"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvWateringFrequency"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:text="TextView" />
+
+            <!-- Next watering -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="@string/acquisition_date"
+                android:textColor="@color/plant_green_dark"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvAcqDate"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:text="TextView" />
+
+            <!-- Notes -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:text="@string/plant_notes"
+                android:textColor="@color/plant_green_dark"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvNotes"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:text="TextView" />
+
+            <!-- Action buttons -->
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="104dp">
+
+                    <Button
+                        android:id="@+id/btnEditPlant"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/plant_green"
+                        android:text="@string/btn_edit"
+                        android:textAllCaps="false"
+                        android:textColor="@color/plant_white" />
+
+                    <Button
+                        android:id="@+id/btnDeletePlant"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/plant_pink"
+                        android:text="@string/btn_delete"
+                        android:textAllCaps="false"
+                        android:textColor="@color/plant_green_dark" />
+
+                </TableRow>
+            </TableLayout>
+
+
+            <TableRow
+                android:layout_width="375dp"
+                android:layout_height="132dp">
+
+                <Button
+                    android:id="@+id/btnHome"
+                    android:layout_width="126dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/plant_green"
+                    android:text="@string/btn_home"
+                    android:textAllCaps="false"
+                    android:textColor="@color/plant_white"
+                    android:textSize="13sp" />
+
+                <Button
+                    android:id="@+id/btnMap"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/plant_pink"
+                    android:text="@string/title_map"
+                    android:textAllCaps="false"
+                    android:textColor="@color/plant_green_dark"
+                    android:textSize="13sp" />
+
+                <Button
+                    android:id="@+id/btnProfile"
+                    android:layout_width="118dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/plant_pink"
+                    android:text="@string/btn_profile"
+                    android:textAllCaps="false"
+                    android:textColor="@color/plant_green_dark"
+                    android:textSize="13sp" />
+
+            </TableRow>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
