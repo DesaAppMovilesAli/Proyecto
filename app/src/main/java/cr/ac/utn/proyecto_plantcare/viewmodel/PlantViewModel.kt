@@ -1,3 +1,4 @@
+
 package cr.ac.utn.proyecto_plantcare.viewmodel
 
 import androidx.lifecycle.ViewModel
@@ -10,17 +11,17 @@ class PlantViewModel(
     private val repository: IPlantRepository
 ) : ViewModel() {
 
-    // Obtener todas las plantas
+    // Get all plants
     fun getPlants(): List<Plant> {
         return repository.getPlants()
     }
 
-    // Obtener una planta por ID
+    // Get a plant by ID
     fun getPlantById(id: String): Plant? {
         return repository.getById(id)
     }
 
-    // Crear una planta
+    // Create a plant
     fun createPlant(plant: Plant) {
         if (repository.getById(plant.id) == null) {
             repository.addPlant(plant)
@@ -29,7 +30,7 @@ class PlantViewModel(
         }
     }
 
-    // Actualizar una planta
+    // Update a plant
     fun updatePlant(plant: Plant) {
         if (repository.getById(plant.id) != null) {
             repository.updatePlant(plant)
@@ -38,7 +39,7 @@ class PlantViewModel(
         }
     }
 
-    // Eliminar una planta
+    // Delete a plant
     fun removePlant(id: String) {
         if (repository.getById(id) != null) {
             repository.deletePlant(id)
@@ -47,44 +48,17 @@ class PlantViewModel(
         }
     }
 
-    // Buscar plantas por nombre o ID
-    fun searchPlants(name: String): List<Plant> {
-        return repository.searchPlants(name)
-    }
-
-    // Filtrar por ubicación
-    fun getPlantsByLocation(
-        location: PlantLocation
-    ): List<Plant> {
-        return repository.getPlantsByLocation(location)
-    }
-
-    // Filtrar por especie
-    fun getPlantsBySpecies(
-        species: String
-    ): List<Plant> {
-        return repository.getPlantsBySpecies(species)
-    }
-
-    // Obtener las especies registradas por el usuario
-    fun getRegisteredSpecies(): List<String> {
-        return repository.getRegisteredSpecies()
-    }
-
-    // Aplicar los filtros seleccionados
+    // Search and filter plants
     fun filterPlants(
         search: String,
         location: PlantLocation?,
         frequency: WateringFrequency?,
-        species: String
     ): List<Plant> {
 
         return repository.filterPlants(
             search,
             location,
-            frequency,
-            species
+            frequency
         )
     }
 }
-

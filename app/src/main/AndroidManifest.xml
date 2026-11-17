@@ -34,10 +34,6 @@
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".FilterActivity"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize" />
-        <activity
             android:name=".MapActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />

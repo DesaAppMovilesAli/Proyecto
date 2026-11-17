@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -8,9 +9,7 @@
     android:background="@color/plant_beige"
     tools:context=".MainActivity">
 
-
     <LinearLayout
-
         android:id="@+id/mainContent"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -46,42 +45,135 @@
             android:textStyle="bold"
             android:textColor="@color/plant_green_dark"/>
 
-        <!-- Search and filter -->
+        <!-- Search and filters -->
 
-        <TableLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:stretchColumns="0">
+            android:orientation="vertical">
 
-            <TableRow
+            <!-- Search by name or ID -->
+
+            <EditText
+                android:id="@+id/etSearchPlant"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="55dp"
+                android:hint="@string/search_plant"
+                android:inputType="text"
+                android:singleLine="true"
+                android:padding="10dp"
+                android:backgroundTint="@color/plant_green"
+                android:textColor="@color/plant_green_dark"
+                android:textColorHint="@color/plant_gray"/>
 
-                <EditText
-                    android:id="@+id/etSearchPlant"
-                    android:layout_width="0dp"
-                    android:layout_height="55dp"
-                    android:hint="@string/search_plant"
-                    android:inputType="text"
-                    android:singleLine="true"
-                    android:padding="10dp"
-                    android:backgroundTint="@color/plant_green"
-                    android:textColor="@color/plant_green_dark"
-                    android:textColorHint="@color/plant_gray"/>
+            <!-- Filter buttons -->
 
-                <Button
-                    android:id="@+id/btnFilters"
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:scrollbars="none">
+
+                <LinearLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="55dp"
-                    android:layout_marginStart="8dp"
-                    android:text="@string/title_filters"
-                    android:textSize="12sp"
-                    android:textAllCaps="false"
-                    android:backgroundTint="@color/plant_pink"
-                    android:textColor="@color/plant_green_dark"/>
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
-            </TableRow>
-        </TableLayout>
+                    <!-- All plants -->
+
+                    <Button
+                        android:id="@+id/btnAllPlants"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/filter_all"
+                        android:textSize="13sp"
+                        android:textAllCaps="false"
+                        android:backgroundTint="@color/plant_green"
+                        android:textColor="@color/plant_white"/>
+
+                    <!-- Indoor plants -->
+
+                    <Button
+                        android:id="@+id/btnIndoorPlants"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="@string/plant_indoor"
+                        android:textSize="13sp"
+                        android:textAllCaps="false"
+                        android:backgroundTint="@color/plant_pink"
+                        android:textColor="@color/plant_green_dark"/>
+
+                    <!-- Outdoor plants -->
+
+                    <Button
+                        android:id="@+id/btnOutdoorPlants"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="@string/plant_outdoor"
+                        android:textSize="13sp"
+                        android:textAllCaps="false"
+                        android:backgroundTint="@color/plant_pink"
+                        android:textColor="@color/plant_green_dark"/>
+
+                    <!-- Daily watering -->
+
+                    <Button
+                        android:id="@+id/btnDailyPlants"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="@string/watering_daily"
+                        android:textSize="13sp"
+                        android:textAllCaps="false"
+                        android:backgroundTint="@color/plant_pink"
+                        android:textColor="@color/plant_green_dark"/>
+
+                    <!-- Every 3 days -->
+
+                    <Button
+                        android:id="@+id/btnThreeDaysPlants"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="@string/watering_three_days"
+                        android:textSize="13sp"
+                        android:textAllCaps="false"
+                        android:backgroundTint="@color/plant_pink"
+                        android:textColor="@color/plant_green_dark"/>
+
+                    <!-- Weekly watering -->
+
+                    <Button
+                        android:id="@+id/btnWeeklyPlants"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="@string/watering_weekly"
+                        android:textSize="13sp"
+                        android:textAllCaps="false"
+                        android:backgroundTint="@color/plant_pink"
+                        android:textColor="@color/plant_green_dark"/>
+
+                    <!-- Every 15 days -->
+
+                    <Button
+                        android:id="@+id/btnFifteenDaysPlants"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="@string/watering_fifteen_days"
+                        android:textSize="13sp"
+                        android:textAllCaps="false"
+                        android:backgroundTint="@color/plant_pink"
+                        android:textColor="@color/plant_green_dark"/>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+        </LinearLayout>
 
         <!-- Plants section -->
 
@@ -176,8 +268,7 @@
                 android:textColor="@color/plant_green_dark"/>
 
         </TableRow>
+
     </TableLayout>
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

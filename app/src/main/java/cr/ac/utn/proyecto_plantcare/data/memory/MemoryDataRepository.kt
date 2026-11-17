@@ -14,13 +14,12 @@ class MemoryDataRepository : IPlantRepository {
 
     private val plants = mutableListOf<Plant>()
 
-    // Agregar una planta
+    // Add a plant
     override fun addPlant(plant: Plant) {
         plants.add(plant)
     }
 
-    // Eliminar una planta por ID
-
+    // Delete a plant by ID
     override fun deletePlant(id: String) {
         plants.removeIf {
             it.id.trim().equals(
@@ -30,19 +29,18 @@ class MemoryDataRepository : IPlantRepository {
         }
     }
 
-
-    // Actualizar una planta
+    // Update a plant
     override fun updatePlant(plant: Plant) {
         deletePlant(plant.id)
         addPlant(plant)
     }
 
-    // Obtener todas las plantas
+    // Get all plants
     override fun getPlants(): List<Plant> {
         return plants
     }
 
-    // Buscar una planta por ID
+    // Get a plant by ID
     override fun getById(id: String): Plant? {
         return plants.find {
             it.id.trim().equals(
@@ -52,67 +50,14 @@ class MemoryDataRepository : IPlantRepository {
         }
     }
 
-    // Buscar plantas por nombre o ID
-    override fun searchPlants(name: String): List<Plant> {
-
-        val search = name.trim()
-
-        return plants.filter {
-            it.name.contains(
-                search,
-                ignoreCase = true
-            ) ||
-                    it.id.equals(
-                        search,
-                        ignoreCase = true
-                    )
-        }
-    }
-
-    // Filtrar plantas por ubicación
-    override fun getPlantsByLocation(
-        location: PlantLocation
-    ): List<Plant> {
-
-        return plants.filter {
-            it.location == location
-        }
-    }
-
-    // Filtrar plantas por especie
-    override fun getPlantsBySpecies(
-        species: String
-    ): List<Plant> {
-
-        return plants.filter {
-            it.species.contains(
-                species.trim(),
-                ignoreCase = true
-            )
-        }
-    }
-
-    // Obtener las especies registradas sin repetir
-    override fun getRegisteredSpecies(): List<String> {
-
-        return plants
-            .map { it.species.trim() }
-            .filter { it.isNotEmpty() }
-            .distinctBy { it.lowercase() }
-            .sorted()
-    }
-
-    // Filtrar por nombre o ID, ubicación,
-    // frecuencia de riego y especie
+    // Search and filter plants
     override fun filterPlants(
         search: String,
         location: PlantLocation?,
-        frequency: WateringFrequency?,
-        species: String
+        frequency: WateringFrequency?
     ): List<Plant> {
 
         val searchText = search.trim()
-        val speciesText = species.trim()
 
         return plants.filter { plant ->
 
@@ -135,17 +80,10 @@ class MemoryDataRepository : IPlantRepository {
                 frequency == null ||
                         plant.wateringFrequency == frequency
 
-            val matchesSpecies =
-                speciesText.isEmpty() ||
-                        plant.species.equals(
-                            speciesText,
-                            ignoreCase = true
-                        )
 
             matchesSearch &&
                     matchesLocation &&
-                    matchesFrequency &&
-                    matchesSpecies
+                    matchesFrequency
         }
     }
 }
