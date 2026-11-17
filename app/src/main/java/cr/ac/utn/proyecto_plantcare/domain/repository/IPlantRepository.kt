@@ -1,3 +1,4 @@
+
 package cr.ac.utn.proyecto_plantcare.domain.repository
 
 import cr.ac.utn.proyecto_plantcare.domain.model.Plant
@@ -6,44 +7,28 @@ import cr.ac.utn.proyecto_plantcare.domain.model.WateringFrequency
 
 interface IPlantRepository {
 
-    // Agregar una planta
+    // Add a plant
     fun addPlant(plant: Plant)
 
-    // Eliminar una planta
+    // Delete a plant
     fun deletePlant(id: String)
 
-    // Actualizar una planta
+    // Update a plant
     fun updatePlant(plant: Plant)
 
-    // Obtener todas las plantas
+    // Get all plants
     fun getPlants(): List<Plant>
 
-    // Obtener una planta por ID
+    // Get a plant by ID
     fun getById(id: String): Plant?
 
-    // Buscar plantas por nombre o ID
-    fun searchPlants(name: String): List<Plant>
-
-    // Filtrar por ubicación
-    fun getPlantsByLocation(
-        location: PlantLocation
-    ): List<Plant>
-
-    // Filtrar por especie
-    fun getPlantsBySpecies(
-        species: String
-    ): List<Plant>
-
-    // Obtener las especies registradas por el usuario
-    fun getRegisteredSpecies(): List<String>
-
-    // Combinar los filtros
+    // Search and filter plants
     fun filterPlants(
         search: String,
         location: PlantLocation?,
-        frequency: WateringFrequency?,
-        species: String
+        frequency: WateringFrequency?
     ): List<Plant>
 }
+
 
 

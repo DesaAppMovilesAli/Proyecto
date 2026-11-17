@@ -3,7 +3,6 @@
     <string name="app_nam">PlantCare</string>
     <string name="title_home">Mis plantas</string>
     <string name="add_plant">Agregar Planta</string>
-    <string name="search_plant">Buscar planta</string>
     <string name="btn_home">Inicio</string>
     <string name="plant_indoor">Interior</string>
     <string name="plant_outdoor">Exterior</string>
@@ -18,9 +17,6 @@
     <string name="plant_location">Ubicación</string>
     <string name="add_photo">Agregar foto</string>
     <string name="btn_save">Guardar</string>
-    <string name="title_filters">Filtros</string>
-    <string name="btn_apply_filters">Aplicar filtros</string>
-    <string name="btn_clear_filters">Limpiar filtros</string>
     <string name="title_edit_plant">Editar planta</string>
     <string name="btn_cancel">Cancelar</string>
     <string name="btn_save_changes">Guardar cambios</string>
@@ -58,5 +54,8 @@
     <string name="watering_fifteen_days">Cada 15 días</string>
     <string name="acquisition_date">Fecha de adquisición</string>
     <string name="plant_id">ID de la planta</string>
+    <string name="duplicate_plant">Ya existe una planta con ese ID</string>
+    <string name="search_plant">Buscar por nombre o ID</string>
+    <string name="filter_all">Todas</string>
 
 </resources>

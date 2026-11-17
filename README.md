@@ -11,15 +11,13 @@ Funcionalidades principales
 
 Registro de plantas (CRUD): permitirá agregar, consultar, editar y eliminar plantas, incluyendo datos como nombre, especie, frecuencia de riego y descripción.
 
-Lista con filtros personalizados: mostrará las plantas registradas y permitirá buscarlas por nombre, especie o necesidad de riego.
+Lista con filtros personalizados: mostrará las plantas registradas y permitirá buscarlas por nombre, id o necesidad de riego.
 
 Cámara y galería: permitirá tomar fotografías o seleccionar imágenes de la galería para agregarlas al registro de cada planta.
 
 Diálogos de confirmación: se utilizarán para confirmar acciones importantes, como eliminar una planta.
 
 Mapa: permitirá registrar y visualizar la ubicación de las plantas mediante un mapa.
-
-Control de riego: permitirá consultar cuándo corresponde realizar el próximo riego de cada planta.
 
 # Mockups
 
@@ -29,23 +27,23 @@ Pantallas previstas:
 
 ### Pantalla principal con la lista de plantas
 
-<img src="Mockups/principal.png" width="300">
+<img src="Mockups/image3.png" width="300">
 
 ### Pantalla para registrar una planta
 
-<img src="Mockups/registrar_planta.png" width="300">
+<img src="Mockups/image.png" width="300">
+
+<img src="Mockups/image2.png" width="300">
 
 ### Pantalla para editar una planta
 
-<img src="Mockups/editar_planta.png" width="300">
+<img src="Mockups/image5.png" width="300">
+
+<img src="Mockups/image6.png" width="300">
 
 ### Pantalla para consultar una planta
 
-<img src="Mockups/consultar_planta.png" width="300">
-
-### Pantalla con filtros de búsqueda
-
-<img src="Mockups/filtros.png" width="300">
+<img src="Mockups/image4.png" width="300">
 
 ### Pantalla de mapa
 
